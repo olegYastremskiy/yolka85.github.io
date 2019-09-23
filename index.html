@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>PMBA</title>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
@@ -25,7 +25,7 @@
                 </div>
                 {{#each menu}}
                 <li class="header__nav-item"><a href="#{{id}}" class="header__nav-link">{{name}}</a></li>
-                {{/each}} 
+                {{/each}}
             </ul>
 
             <div class="header__burger--toggler">
@@ -66,7 +66,7 @@
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section id="{{menu.0.id}}" class="about">
             {{#with about}}
             <div class="container about__container--head">
                 <div class="about__sector about__sector--right">
@@ -80,7 +80,7 @@
                     <div class="about__row">
                         <div class="about__tile about__tile--size-s about__tile--size-mob">
                           <div class="about__tile--heading">
-                            {{tile1.heading}} 
+                            {{tile1.heading}}
                             <img class="about__tile--emoji" src="{{tile1.emojiSrc}}" alt="emoji">
                           </div>
 
@@ -105,7 +105,7 @@
                         <div class="about__tile about__tile--size-l">
                           <div class="about__tile--heading">
                             {{tile3.heading}}
-                            <img class="about__tile--emoji" src="{{tile3.emojiSrc}}" alt="emoji">                          
+                            <img class="about__tile--emoji" src="{{tile3.emojiSrc}}" alt="emoji">
                           </div>
 
                           <div class="about__tile--description">
@@ -134,7 +134,7 @@
                               {{tile6.heading}}
                               <img class="about__tile--emoji" src="{{tile6.emojiSrc}}" alt="emoji">
                             </div>
-  
+
                             <div class="about__tile--description">
                               <p class="about__tile--description-text">{{tile6.description}}</p>
                             </div>
@@ -143,7 +143,7 @@
                           <div class="about__tile about__tile--left">
                             <div class="about__tile--heading">
                               {{tile5.heading}}
-                              <img class="about__tile--emoji" src="{{tile5.emojiSrc}}" alt="emoji">                          
+                              <img class="about__tile--emoji" src="{{tile5.emojiSrc}}" alt="emoji">
                             </div>
 
                             <div class="about__tile--description">
@@ -194,22 +194,22 @@
         </section>
 
         {{#with speakers}}
-        <section class="speakers">
-            <h2 class="speakers__title">{{title}}</h2> 
+        <section id="{{../menu.1.id}}" class="speakers">
+            <h2 class="speakers__title">{{title}}</h2>
 
             <div class="speakers__bird">
               <img src="images/img2-flamingo.png" alt="flamingo">
             </div>
 
             <div class="speakers__wrapper speakers__wrapper--image">
-              <div class="speakers__image" style="background-image:url({{info.0.image}})"></div>
+              <div id="speaker-image" class="speakers__image" style="background-image:url({{info.0.image}})"></div>
             </div>
-            
+
             <div class="speakers__wrapper speakers__wrapper--text">
               <div class="speakers__info speakers__info--desktop">
-                <h3 class="speakers__info--name">{{info.0.name}}</h3>
+                <h3 id="speaker-name" class="speakers__info--name">{{info.0.name}}</h3>
 
-                <p class="speakers__info--position">{{info.0.position}}</p>
+                <p id="speaker-info" class="speakers__info--position">{{info.0.position}}</p>
               </div>
 
               <div class="speakers__carousel">
@@ -220,11 +220,45 @@
 
                         <p class="speakers__info--position">{{position}}</p>
                     </div>
-                    <div id='{{@index}}' class="speakers__tile" style="background-image:url({{image}})"></div>
+                    <div data-id='{{@index}}' class="speakers__tile" style="background-image:url({{image}})"></div>
                   </div>
                 {{/each}}
               </div>
             </div>
+        </section>
+        {{/with}}
+
+        {{#with location}}
+        <section class="location">
+          <div class="container location__container">
+            <div class="location--width location__text">
+                <h3 class="location__title">{{title}}</h3>
+                {{#each text}}
+                <p class="location__text--text"><span class="location__text--weight">{{bold}}</span> {{regular}}</p>
+                {{/each}}
+            </div>
+
+            <div class="location--width location__img">
+              <img src="images/img3.jpg" alt="location image">
+            </div>
+          </div>
+
+          <div id="{{../menu.2.id}}" class="location__string">
+            <div class="location__string--text">{{string}}</div>
+          </div>
+
+          <div class="container location__buttons">
+            <div class="location__buttons--wrapper">
+              <a href="#">
+                <img src="images/online-btn.svg" alt="online">
+              </a>
+            </div>
+            <div class="location__buttons--wrapper">
+              <a href="#">
+                <img src="images/offline-btn.svg" alt="offline">
+              </a>
+            </div>
+          </div>
         </section>
         {{/with}}
       </script>
@@ -267,6 +301,7 @@
     ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="scripts/circletype.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.spincrement.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
     <!-- Scripts END -->
