@@ -902,6 +902,9 @@ img {
       font-size: 2rem;
       -webkit-animation: spin 8s linear 0s infinite;
               animation: spin 8s linear 0s infinite; }
+  .main-top__img--wrapper {
+    width: 100%;
+    /*For IE11*/ }
   .main-top__text--l {
     font-size: 6rem; }
   .main-top__text--m {
@@ -1070,6 +1073,8 @@ img {
     width: 100%;
     padding-left: 5rem; }
     .main-top__img--wrapper {
+      width: auto;
+      /*For IE11*/
       margin-left: auto;
       margin-right: -2.4rem;
       margin-bottom: -4rem; }

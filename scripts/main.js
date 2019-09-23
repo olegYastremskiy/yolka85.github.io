@@ -83,7 +83,7 @@
     var dataId = $(event.target).attr("data-id");
     $("#speaker-image").css(
       "background-image",
-      `url(${data.speakers.info[dataId].image})`
+      "url(" + data.speakers.info[dataId].image + ")"
     );
     $("#speaker-name").text(data.speakers.info[dataId].name);
     $("#speaker-info").text(data.speakers.info[dataId].position);
