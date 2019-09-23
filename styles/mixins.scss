@@ -1,0 +1,11 @@
+/*=== MIXINS ===*/
+@mixin flex-locating(
+  $_flex-direction: row,
+  $_align-items: stretch,
+  $_justify-content: flex-start
+) {
+  display: flex;
+  justify-content: $_justify-content;
+  align-items: $_align-items;
+  flex-direction: $_flex-direction;
+}

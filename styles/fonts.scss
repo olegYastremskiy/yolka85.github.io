@@ -1,0 +1,26 @@
+/*===Fonts===*/
+@font-face {
+    font-family: 'Journal Sans';
+    src: url('../font/JournalSans-Bold.eot');
+    src: url('../font/JournalSans-Bold.eot') format("embedded-opentype"),
+        url('../font/JournalSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/JournalSans-Bold.woff2') format('woff2'),
+        url('../font/JournalSans-Bold.woff') format('woff'),
+        url('../font/JournalSans-Bold.ttf') format('truetype'),
+        url('../font/JournalSans-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Journal Sans';
+    src: url('../font/JournalSans.eot');
+    src: url('../font/Journal Sans.eot') format('embedded-opentype'),
+        url('../font/JournalSans.eot?#iefix') format('embedded-opentype'),
+        url('../font/JournalSans.woff2') format('woff2'),
+        url('../font/JournalSans.woff') format('woff'),
+        url('../font/JournalSans.ttf') format('truetype'),
+        url('../font/JournalSans.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

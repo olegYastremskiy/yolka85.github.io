@@ -1,0 +1,86 @@
+.speakers{
+    position: relative;
+    display: flex;
+    padding: 9rem 0;
+    background-color: #fff;
+    overflow: hidden;
+    &__title{
+        position: absolute;
+        top: 48rem;
+        left: -45.3rem;
+        text-transform: uppercase;
+        font-size: 18rem;
+        letter-spacing: 4rem;
+        font-weight: bold;
+        transform: rotate(90deg);
+    }
+    &__wrapper{
+        width: 50%;
+        padding-top: 17.3rem;
+        &--image{
+            padding-left: 11rem;
+            padding-right: 5rem;
+        }
+        
+    }
+    &__image{
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        width: 63.7rem;
+        height: 65.7rem;
+        max-width: 100%;
+        margin-left: auto;
+    }
+    &__info{
+        padding-top: 2.5rem;
+        padding-right: 30rem;
+        &--name{
+            margin-bottom: 2rem;
+            font-size: 5rem;
+            text-decoration: underline;
+        }
+        &--position{
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+    }
+    &__carousel{
+        position: relative;
+        padding-top: 12.4rem;
+        margin-left: -10rem;
+        padding-bottom: 8.9rem;
+        &--btn-prev{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 2.1rem;
+        }
+        &--btn-next{
+            position: absolute;
+            bottom: 0;
+            right: 40%;
+            width: 2.1rem;
+        }
+    }
+    &__tile{
+        width: 100%;
+        height: 23.7rem;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        cursor: pointer;
+        &--wrapper{
+            padding-right: 3.8rem;
+        }
+        &--info{
+            display: none;
+        }
+    }
+    &__bird{
+        position: absolute;
+        top: 6.5rem;
+        right: 0;
+        width: 28.9rem;
+    }
+}

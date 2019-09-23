@@ -1,0 +1,73 @@
+.header{
+    width: 100%;
+    background: #fff;
+    &__wrapper{
+        @include flex-locating(row, center, space-between);
+    }
+    &__logo{
+        width: 76.4rem;
+        max-width: 45%;
+    }
+    &__nav{
+        @include flex-locating(row, center, space-between);
+        width: 50%;
+        &-item{
+            padding: 0 1rem;
+            &:first-of-type{
+                padding-left: 0;
+            }
+            &:last-of-type{
+                padding-right: 0;
+            }
+        }
+        &-link{
+            text-decoration: none;
+            font-size: 3rem;
+        }
+        &--closer{
+            display: none;
+            position: relative;
+            padding-right: 1.4rem;
+            margin-left: auto;
+            font-size: 3rem;
+            line-height: 3.9rem;
+            text-align: right;
+            &-trigger{
+                position: absolute;
+                top: 0;
+                right: 1rem;
+                width: 4.4rem;
+                height: 3.9rem;
+            }
+        }
+    }
+    &__burger{
+        &--toggler{
+            display: none;
+            position: relative;
+            cursor: pointer;
+        }
+        &--line{
+        border-top: 0.2rem solid #000;
+        margin-bottom: .4rem;
+        margin-left: auto;            
+            &-top{
+                width: 2.9rem;
+            }
+            &-middle{
+                width: 1.7rem;
+            }
+            &-bottom{
+                width: 2.3rem;
+                margin-bottom: 0;
+            }
+        }
+        &--trigger{
+            position: absolute;
+            height: 200%;
+            width: 200%;
+            top: -50%;
+            left: -50%;
+        }
+    }
+}

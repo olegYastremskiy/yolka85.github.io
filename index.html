@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PMBA</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <script id="pmba" type="text/x-handlebars-template">
+
+        <header class="header">
+          <div class="container header__wrapper">
+            <div class="header__logo">
+                <img src="images/PMBA-logo.svg" alt="logo">
+            </div>
+
+            <ul class="header__nav">
+                <div class="header__nav--closer">
+                    &times;
+                    <div class="header__nav--closer-trigger"></div>
+                </div>
+                {{#each menu}}
+                <li class="header__nav-item"><a href="#{{id}}" class="header__nav-link">{{name}}</a></li>
+                {{/each}}
+            </ul>
+
+            <div class="header__burger--toggler">
+                <div class="header__burger">
+                    <div class="header__burger--line header__burger--line-top"></div>
+                    <div class="header__burger--line header__burger--line-middle"></div>
+                    <div class="header__burger--line header__burger--line-bottom"></div>
+                </div>
+
+                <div class="header__burger--trigger"></div>
+            </div>
+          </div>
+        </header>
+
+        <section class="main-top">
+            <div class="container main-top__container">
+                {{#with mainTop}}
+                <div class="main-top__img">
+                    <div class="main-top__img--wrapper">
+                        <img class="main-top__img--img" src="../images/img1.jpg" alt="top image">
+
+                        <div class="main-top__img--circle">
+                            <ul id="main-top__img--circle-text" class="main-top__img--circle-text"> • <li>{{circle}}</li> • <li>{{circle}}</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-top__text">
+                    <h1 class="main-top__text--l">{{heading}}</h1>
+
+                    {{#each text}}
+                    <p class="main-top__text--m">
+                      <span class="main-top__text--bold">{{question}}</span>
+                      {{answer}}
+                    </p>
+                    {{/each}}
+                </div>
+                {{/with}}
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            {{#with about}}
+            <div class="container about__container--head">
+                <div class="about__sector about__sector--right">
+                    <h2 class="about__heading">{{heading}}</h2>
+                </div>
+            </div>
+
+            <div class="container about__container">
+              {{#with info}}
+                <div class="about__sector about__sector--left">
+                    <div class="about__row">
+                        <div class="about__tile about__tile--size-s about__tile--size-mob">
+                          <div class="about__tile--heading">
+                            {{tile1.heading}} 
+                            <img class="about__tile--emoji" src="{{tile1.emojiSrc}}" alt="emoji">
+                          </div>
+
+                          <div class="about__tile--description">
+                            <p class="about__tile--description-text">{{tile1.description}}</p>
+                          </div>
+                        </div>
+
+                        <div class="about__tile about__tile--size-l about__tile--size-mob">
+                          <div class="about__tile--heading">
+                            {{tile2.heading}}
+                            <img class="about__tile--emoji" src="{{tile2.emojiSrc}}" alt="emoji">
+                          </div>
+
+                          <div class="about__tile--description">
+                            <p class="about__tile--description-text">{{tile2.description}}</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="about__row about__row--bottom">
+                        <div class="about__tile about__tile--size-l">
+                          <div class="about__tile--heading">
+                            {{tile3.heading}}
+                            <img class="about__tile--emoji" src="{{tile3.emojiSrc}}" alt="emoji">                          
+                          </div>
+
+                          <div class="about__tile--description">
+                            <p class="about__tile--description-text">{{tile3.description}}</p>
+                          </div>
+                        </div>
+
+                        <div class="about__tile about__tile--size-s">
+                          <div class="about__tile--heading">
+                            {{tile4.heading}}
+                            <img class="about__tile--emoji" src="{{tile4.emojiSrc}}" alt="emoji">
+                          </div>
+
+                          <div class="about__tile--description">
+                            <p class="about__tile--description-text">{{tile4.description}}</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__sector">
+                    <div class="about__row">
+                        <div class="about__column--left">
+                          <div class="about__tile about__tile--mobile about__tile--height-s">
+                            <div class="about__tile--heading">
+                              {{tile6.heading}}
+                              <img class="about__tile--emoji" src="{{tile6.emojiSrc}}" alt="emoji">
+                            </div>
+  
+                            <div class="about__tile--description">
+                              <p class="about__tile--description-text">{{tile6.description}}</p>
+                            </div>
+                          </div>
+
+                          <div class="about__tile about__tile--left">
+                            <div class="about__tile--heading">
+                              {{tile5.heading}}
+                              <img class="about__tile--emoji" src="{{tile5.emojiSrc}}" alt="emoji">                          
+                            </div>
+
+                            <div class="about__tile--description">
+                              <p class="about__tile--description-text">{{tile5.description}}</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="about__column">
+                            <div class="about__tile about__tile--hide">
+                              <div class="about__tile--heading">
+                                {{tile6.heading}}
+                                <img class="about__tile--emoji" src="{{tile6.emojiSrc}}" alt="emoji">
+                              </div>
+
+                              <div class="about__tile--description">
+                                <p class="about__tile--description-text">{{tile6.description}}</p>
+                              </div>
+                            </div>
+
+                            <div class="about__tile about__tile--mobile about__tile--sales">
+                              <div class="about__tile--heading">
+                                {{tile4.heading}}
+                                <img class="about__tile--emoji" src="{{tile4.emojiSrc}}" alt="emoji">
+                              </div>
+
+                              <div class="about__tile--description">
+                                <p class="about__tile--description-text">{{tile4.description}}</p>
+                              </div>
+                            </div>
+
+                            <div class="about__tile about__column--bottom">
+                              <div class="about__tile--heading">
+                                {{tile7.heading}}
+                                <img class="about__tile--emoji" src="{{tile7.emojiSrc}}" alt="emoji">
+                              </div>
+
+                              <div class="about__tile--description">
+                                <p class="about__tile--description-text">{{tile7.description}}</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/with}}
+            </div>
+            {{/with}}
+        </section>
+
+        {{#with speakers}}
+        <section class="speakers">
+            <h2 class="speakers__title">{{title}}</h2> 
+
+            <div class="speakers__bird">
+              <img src="images/img2-flamingo.png" alt="flamingo">
+            </div>
+
+            <div class="speakers__wrapper speakers__wrapper--image">
+              <div class="speakers__image" style="background-image:url({{info.0.image}})"></div>
+            </div>
+            
+            <div class="speakers__wrapper speakers__wrapper--text">
+              <div class="speakers__info speakers__info--desktop">
+                <h3 class="speakers__info--name">{{info.0.name}}</h3>
+
+                <p class="speakers__info--position">{{info.0.position}}</p>
+              </div>
+
+              <div class="speakers__carousel">
+                {{#each info}}
+                  <div class="speakers__tile--wrapper">
+                    <div class="speakers__info speakers__tile--info">
+                        <h3 class="speakers__info--name">{{name}}</h3>
+
+                        <p class="speakers__info--position">{{position}}</p>
+                    </div>
+                    <div id='{{@index}}' class="speakers__tile" style="background-image:url({{image}})"></div>
+                  </div>
+                {{/each}}
+              </div>
+            </div>
+        </section>
+        {{/with}}
+      </script>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml: true,
+          version: "v4.0"
+        });
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    ?
+    <!-- Your customer chat code -->
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="121274619260266"
+      logged_in_greeting="Я – PMBA-бот, який нагадає тобі заповнити анкету на програму."
+      logged_out_greeting="Я – PMBA-бот, який нагадає тобі заповнити анкету на програму."
+      ref="test"
+    ></div>
+    <!-- Scripts BEGIN -->
+    <script type="text/javascript" src="scripts/handlebars-v4.1.2.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/circletype.min.js"></script>
+    <script type="text/javascript" src="scripts/data.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <!-- Scripts END -->
+  </body>
+</html>

@@ -1,0 +1,49 @@
+/*=== Global selectors ===*/
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+i,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+footer,
+header,
+menu,
+nav,
+section {
+  font-family: "Journal Sans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 100%;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}

@@ -1,0 +1,52 @@
+.main-top{
+    &__container{
+        @include flex-locating(row, stretch, space-between);
+        padding-top: 9.4rem;
+    }
+    &__img{
+        @include flex-locating(row, flex-end, flex-end);
+        width: 45%;
+        text-align: right;
+        &--wrapper{
+            position: relative;
+            margin-bottom: -7rem;
+        }
+        &--img{
+            width: 49.5rem;
+        }
+        &--circle{
+            @include flex-locating(row, center, center);
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translate(50%, -50%);
+            width: 27.6rem;
+            height: 27.6rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #fff;
+            &-text{
+                font-size: 3rem;
+                animation: spin 8s linear 0s infinite;
+            }
+        }
+    }
+    &__text{
+        width: 50%;
+        padding-bottom: 10rem;
+        &--l{
+            margin-bottom: 5rem;
+            font-size: 7rem;
+            line-height: 1.21;
+            text-decoration: underline;
+        }
+        &--m{
+            max-width: 44.3rem;
+            font-size: 3rem;
+            line-height: 1.67;
+        }
+        &--bold{
+            font-weight: bold;
+        }
+    }
+}
