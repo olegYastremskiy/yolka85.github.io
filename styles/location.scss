@@ -1,4 +1,5 @@
 .location {
+  padding-bottom: 10rem;
   &__container {
     @include flex-locating(row, flex-end, center);
     padding-top: 20rem;
@@ -42,6 +43,20 @@
     &--wrapper {
       width: 38.5rem;
       margin: 0 2.8rem;
+    }
+  }
+  &__fb{
+    &--link{
+      @include flex-locating(row, center, flex-start);
+      display: inline-flex;
+      text-decoration: none;
+    }
+    &--icon-wrapper{
+      width: 4.5rem;
+      margin-right: 1.4rem;
+    }
+    &--text{
+      font-size: 3rem;
     }
   }
 }

@@ -420,7 +420,7 @@
     }
     &__bird {
       width: 10.8rem;
-      top: 4.2rem;
+      top: 2.2rem;
     }
     &__wrapper {
       &--image {
@@ -428,12 +428,13 @@
       }
       &--text {
         width: 100%;
-        padding-top: 16.4rem;
+        padding-top: 12.4rem;
         padding-left: 9.6rem;
         padding-right: 2.4rem;
       }
     }
     &__info {
+      min-height: 10rem;
       padding-right: 0;
       padding-left: 2.4rem;
       &--name {
@@ -449,7 +450,7 @@
     }
     &__carousel {
       margin-left: 0;
-      padding-bottom: 7.9rem;
+      padding-bottom: 3.9rem;
       padding-top: 0;
       &--btn-prev {
         left: calc(35% - 4.8rem);
@@ -468,7 +469,6 @@
       &--info {
         display: block;
         padding-bottom: 2.9rem;
-        height: 14rem;
         max-width: 28.5rem;
         margin: auto;
       }

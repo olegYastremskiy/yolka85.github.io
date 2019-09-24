@@ -89,7 +89,7 @@ var data = {
       {
         image: "images/DmitriyZinchenko.png",
         name: "Дмитро Зінченко",
-        position: "Digital Ukraine, Caucasus & Moldova"
+        position: "Digital"
       },
       {
         image: "images/UliyanaKravchenko.png",
@@ -152,7 +152,7 @@ var data = {
         position: "Procurement"
       },
       {
-        image: "",
+        image: "images/OksanaMartinenko.png",
         name: "Оксана Мартиненко",
         position: "Environment&Compliance"
       },
@@ -160,6 +160,11 @@ var data = {
         image: "images/YuriyKhlopyanyk.png",
         name: "Юра Хлопяник",
         position: "Warehousing"
+      },
+      {
+        image: "images/BohdanNahaylo.png",
+        name: "Богдан Нагайло",
+        position: "RRP"
       }
     ]
   },
@@ -181,6 +186,7 @@ var data = {
           "Перше, що ти побачиш в анкеті – це текст: Завантаж резюме. Без паніки, просто скроль нижче і заповнюй без CV."
       }
     ],
-    string: "Подати заявку"
+    string: "Подати заявку",
+    facebook: "Наш Facebook",
   }
 };

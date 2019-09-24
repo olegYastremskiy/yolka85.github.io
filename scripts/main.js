@@ -79,15 +79,22 @@
   });
 
   //Carousel image handler
-  $(".speakers__tile").click(function(event) {
-    var dataId = $(event.target).attr("data-id");
+  function setBigImageInfoText(index) {
     $("#speaker-image").css(
       "background-image",
-      "url(" + data.speakers.info[dataId].image + ")"
+      "url(" + data.speakers.info[index].image + ")"
     );
-    $("#speaker-name").text(data.speakers.info[dataId].name);
-    $("#speaker-info").text(data.speakers.info[dataId].position);
-    console.log(dataId);
+    $("#speaker-name").text(data.speakers.info[index].name);
+    $("#speaker-info").text(data.speakers.info[index].position);
+  }
+  $(".speakers__tile").click(function(event) {
+    var dataId = $(event.target).attr("data-id");
+    setBigImageInfoText(dataId);
+  });
+  //---Carousel--- Change big image on arrows click
+  $(".slick-arrow").on("click", function(event) {
+    var dataId = $(".slick-current .speakers__tile").attr("data-id");
+    setBigImageInfoText(dataId);
   });
 
   //Ticker
@@ -101,14 +108,12 @@
   };
   ticker.css({ overflow: "hidden", width: "100%" });
   ticker.wrapInner("<span>");
-  ticker
-    .find("span")
-    .css({
-      width: "50%",
-      display: "inline-block",
-      "text-align": "center",
-      "font-weight": "bold"
-    });
+  ticker.find("span").css({
+    width: "50%",
+    display: "inline-block",
+    "text-align": "center",
+    "font-weight": "bold"
+  });
   ticker.append(ticker.find("span").multiply(1));
   ticker.wrapInner("<div>");
   ticker.find("div").css("width", "200%");

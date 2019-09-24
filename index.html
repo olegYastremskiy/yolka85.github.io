@@ -9,6 +9,36 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml: true,
+          version: "v4.0"
+        });
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    ?
+    <!-- Your customer chat code -->
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="121274619260266"
+      logged_in_greeting="Я – PMBA-бот, який нагадає тобі заповнити анкету на програму."
+      logged_out_greeting="Я – PMBA-бот, який нагадає тобі заповнити анкету на програму."
+      ref="test"
+    ></div>
+
     <div id="app">
       <script id="pmba" type="text/x-handlebars-template">
 
@@ -249,50 +279,31 @@
 
           <div class="container location__buttons">
             <div class="location__buttons--wrapper">
-              <a href="#">
+              <a href="http://bit.ly/pmba_online_website">
                 <img src="images/online-btn.svg" alt="online">
               </a>
             </div>
             <div class="location__buttons--wrapper">
-              <a href="#">
+              <a href="http://bit.ly/pmba_offline_website">
                 <img src="images/offline-btn.svg" alt="offline">
               </a>
             </div>
+          </div>
+
+          <div class="container location__fb">
+            <a class="location__fb--link" href="https://www.facebook.com/insidePMIUkraine/">
+              <div class="location__fb--icon-wrapper">
+                <img src="images/FB-logo.svg" alt="facebook">
+              </div>
+
+              <div class="location__fb--text">{{facebook}}</div>
+            </a>
           </div>
         </section>
         {{/with}}
       </script>
     </div>
 
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml: true,
-          version: "v4.0"
-        });
-      };
-
-      (function(d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-    ?
-    <!-- Your customer chat code -->
-    <div
-      class="fb-customerchat"
-      attribution="setup_tool"
-      page_id="121274619260266"
-      logged_in_greeting="Я – PMBA-бот, який нагадає тобі заповнити анкету на програму."
-      logged_out_greeting="Я – PMBA-бот, який нагадає тобі заповнити анкету на програму."
-      ref="test"
-    ></div>
     <!-- Scripts BEGIN -->
     <script type="text/javascript" src="scripts/handlebars-v4.1.2.js"></script>
     <script
