@@ -33,7 +33,7 @@ var data = {
       },
       {
         question: "Коли?",
-        answer: "З 2 листопада по 12 грудня"
+        answer: "З 2 листопада по 7 грудня"
       }
     ]
   },
@@ -187,6 +187,6 @@ var data = {
       }
     ],
     string: "Подати заявку",
-    facebook: "Наш Facebook",
+    facebook: "Наш Facebook"
   }
 };

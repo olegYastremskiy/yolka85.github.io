@@ -3,6 +3,10 @@
   display: flex;
   padding: 9rem 0;
   background-color: #fff;
+  &__anchor {
+    position: absolute;
+    top: 20rem;
+  }
   &__title {
     position: absolute;
     top: 48rem;

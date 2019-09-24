@@ -744,6 +744,9 @@ img {
   display: flex;
   padding: 9rem 0;
   background-color: #fff; }
+  .speakers__anchor {
+    position: absolute;
+    top: 20rem; }
   .speakers__title {
     position: absolute;
     top: 48rem;
@@ -1025,6 +1028,8 @@ img {
       right: 37%; }
   .speakers__bird {
     width: 15rem; }
+  .speakers__anchor {
+    top: 3rem; }
 
   .location__container {
     -webkit-box-pack: end;
@@ -1261,9 +1266,16 @@ img {
         width: 14.9rem;
         margin: 0 1rem; } }
 @media screen and (max-width: 500px) {
+  .about__tile--description {
+    padding: 1rem; }
+    .about__tile--description-text {
+      font-size: 1.6rem; }
+
   .speakers__tile {
     height: 26.8rem;
     max-width: 28.5rem; }
+  .speakers__anchor {
+    top: 20rem; }
 
   .location__img {
     margin-bottom: -4rem; }

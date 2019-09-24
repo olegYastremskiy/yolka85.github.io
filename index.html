@@ -224,12 +224,14 @@
         </section>
 
         {{#with speakers}}
-        <section id="{{../menu.1.id}}" class="speakers">
+        <section class="speakers">
             <h2 class="speakers__title">{{title}}</h2>
 
             <div class="speakers__bird">
               <img src="images/img2-flamingo.png" alt="flamingo">
             </div>
+
+            <div id="{{../menu.1.id}}" class="speakers__anchor"></div>
 
             <div class="speakers__wrapper speakers__wrapper--image">
               <div id="speaker-image" class="speakers__image" style="background-image:url({{info.0.image}})"></div>

@@ -201,6 +201,9 @@
     &__bird {
       width: 15rem;
     }
+    &__anchor {
+      top: 3rem;
+    }
   }
   .location {
     &__container {
@@ -513,10 +516,23 @@
 }
 
 @media screen and (max-width: $breakpoint-xs) {
+  .about {
+    &__tile {
+      &--description {
+        padding: 1rem;
+        &-text {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
   .speakers {
     &__tile {
       height: 26.8rem;
       max-width: 28.5rem;
+    }
+    &__anchor {
+      top: 20rem;
     }
   }
   .location {
