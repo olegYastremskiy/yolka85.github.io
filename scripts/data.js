@@ -165,6 +165,16 @@ var data = {
         image: "images/BohdanNahaylo.png",
         name: "Богдан Нагайло",
         position: "RRP"
+      },
+      {
+        image: "images/pmba-photo-dumchikov.png",
+        name: "Олександр Думчіков",
+        position: "Business Intelligence"
+      },
+      {
+        image: "images/pmba-photo-Panchenko.png",
+        name: "Сергій Панченко",
+        position: "Finance "
       }
     ]
   },
