@@ -1281,3 +1281,6 @@ img {
     margin-bottom: -4rem; }
   .location__string--text {
     font-size: 3.7rem; } }
+@media screen and (max-width: 375px) {
+  .about__tile--heading {
+    font-size: 1.8rem; } }

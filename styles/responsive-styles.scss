@@ -550,7 +550,7 @@
 @media screen and (max-width: $breakpoint-xxs) {
   .about {
     &__tile {
-      &__heading {
+      &--heading {
         font-size: 1.8rem;
       }
     }
