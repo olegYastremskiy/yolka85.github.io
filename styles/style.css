@@ -897,6 +897,54 @@ img {
   .location__fb--text {
     font-size: 3rem; }
 
+.popup {
+  position: fixed;
+  right: 7rem;
+  bottom: 6rem;
+  z-index: 8; }
+  .popup__closer {
+    font-size: 6rem;
+    text-align: right;
+    position: relative;
+    top: 2rem;
+    right: 0;
+    cursor: pointer; }
+  .popup__container {
+    position: absolute;
+    top: 12rem;
+    left: 2.9rem;
+    text-align: center; }
+  .popup__icon--please {
+    width: 2.1rem;
+    margin-left: 0.5rem; }
+  .popup__icon--messenger {
+    width: 4.9rem;
+    margin-top: 3.4rem;
+    cursor: pointer; }
+  .popup__icon--wrapper {
+    display: none;
+    position: fixed;
+    right: 7rem;
+    bottom: 6rem;
+    z-index: 8; }
+  .popup__text {
+    font-size: 2rem;
+    text-align: left; }
+    .popup__text--question {
+      width: 12rem;
+      height: 13rem;
+      padding: 1.6rem 1.3rem;
+      color: #fff;
+      background-color: #0095ff;
+      border-radius: 1.5rem 1.5rem 1.5rem 0.5rem; }
+    .popup__text--answer {
+      width: 12rem;
+      height: 3.7rem;
+      padding: 0.9rem 1.6rem;
+      margin: 0.9rem 0 0 2rem;
+      background-color: #d5d5d5;
+      border-radius: 1.5rem 1.5rem 0.5rem 1.5rem; }
+
 @media screen and (min-width: 769px) {
   .about__tile:hover .about__tile--heading {
     display: none; }
@@ -1264,7 +1312,14 @@ img {
       padding-bottom: 13rem; }
       .location__buttons--wrapper {
         width: 14.9rem;
-        margin: 0 1rem; } }
+        margin: 0 1rem; }
+
+  .popup {
+    display: none; }
+    .popup__icon--wrapper {
+      display: block;
+      bottom: 2rem;
+      right: 2rem; } }
 @media screen and (max-width: 500px) {
   .about__tile--description {
     padding: 1rem; }
@@ -1280,7 +1335,11 @@ img {
   .location__img {
     margin-bottom: -4rem; }
   .location__string--text {
-    font-size: 3.7rem; } }
+    font-size: 3.7rem; }
+
+  .popup {
+    right: calc(50% - 124px);
+    bottom: calc(50% - 200px); } }
 @media screen and (max-width: 375px) {
   .about__tile--heading {
     font-size: 1.8rem; } }

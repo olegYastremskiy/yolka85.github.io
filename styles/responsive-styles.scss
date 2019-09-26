@@ -513,6 +513,16 @@
       }
     }
   }
+  .popup {
+    display: none;
+    &__icon {
+      &--wrapper {
+        display: block;
+        bottom: 2rem;
+        right: 2rem;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $breakpoint-xs) {
@@ -544,6 +554,10 @@
         font-size: 3.7rem;
       }
     }
+  }
+  .popup {
+    right: calc(50% - 124px);
+    bottom: calc(50% - 200px);
   }
 }
 

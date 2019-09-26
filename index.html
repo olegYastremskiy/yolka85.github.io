@@ -302,6 +302,27 @@
           </div>
         </section>
         {{/with}}
+
+        <div class="popup">
+          <div class="popup__closer">
+            &times;
+          </div>
+          {{#with popup}}
+          <div class="popup__background"><img src="images/PopUP-background.png" alt="background"></div>
+          <div class="popup__container">
+            <p class="popup__text popup__text--question">{{question}}</p>
+
+            <p class="popup__text popup__text--answer">{{answer}} <img class="popup__icon--please" src="images/icon-person-with-folded-hands.png" alt="please"></p>
+
+            <a href="https://m.me/121274619260266">
+              <img class="popup__icon--messenger" src="images/Messenger-logo.png" alt="messenger">
+            </a>
+          </div>
+          {{/with}}
+        </div>
+        <div class="popup__icon--wrapper">
+          <img class="popup__icon--messenger" src="images/Messenger-logo.png" alt="messenger">
+        </div>
       </script>
     </div>
 

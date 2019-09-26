@@ -198,5 +198,9 @@ var data = {
     ],
     string: "Подати заявку",
     facebook: "Наш Facebook"
+  },
+  popup: {
+    question: "Нагадати тобі в Facebook заповнити анкету?",
+    answer: "Тааак"
   }
 };

@@ -134,4 +134,21 @@
       .stop()
       .animate({ scrollTop: $(d).offset().top - 100 }, t);
   });
+
+  //Popup
+  $(".popup__closer").on("click", function() {
+    $(".popup").css("display", "none");
+    $(".popup__icon--wrapper").css("display", "block");
+  });
+  $(".popup__icon--wrapper").on("click", function() {
+    $(".popup").css("display", "block");
+    $(".popup__icon--wrapper").css("display", "none");
+  });
+  function showPopup() {
+    if ($(window).width() <= "769") {
+      $(".popup").css("display", "block");
+      $(".popup__icon--wrapper").css("display", "none");
+    }
+  }
+  setTimeout(showPopup, 10000);
 })();
